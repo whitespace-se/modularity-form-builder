@@ -28,8 +28,14 @@ class Submission
                     $response = (isset($_POST['g-recaptcha-response']) && strlen($_POST['g-recaptcha-response']) > 0) ? $_POST['g-recaptcha-response'] : null;
                     $reCaptcha = \Municipio\Helper\ReCaptcha::controlReCaptcha($response);
                     if (!$reCaptcha) {
-                        echo 'false';
-                        wp_die();
+                      $referer = parse_url($referer, PHP_URL_PATH);
+                      if (strpos($referer, '?') > -1) {
+                          $referer .= '&form=blocked';
+                      } else {
+                          $referer .= '?form=blocked';
+                      }
+                      wp_redirect($referer);
+                      exit;
                     }
                 }
             }

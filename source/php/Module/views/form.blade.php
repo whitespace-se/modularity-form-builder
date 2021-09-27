@@ -30,6 +30,16 @@
             </div>
         @endif
 
+        @if (isset($_GET['form']) && $_GET['form'] == 'blocked')
+            <div class="grid">
+                <div class="grid-md-12">
+                    <div class="notice warning"><i
+                                class="pricon pricon-notice-warning pull-left"></i> <strong><?php _e('You must confirm you\'re not a robot.', 'modularity-form-builder'); ?></strong><p><?php _e('One or more plugins on your computer are blocking the reCaptcha service. Please temporarily disable software such as AdGuard Blocker before trying again.', 'modularity-form-builder'); ?></p>
+                    </div>
+                </div>
+            </div>
+        @endif
+
         @if (!isset($_GET['form']) || $_GET['form'] != 'success')
             @foreach ($form_fields as $field)
                 @includeIf('fields.' . $field['acf_fc_layout'])
