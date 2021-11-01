@@ -886,7 +886,7 @@ msgstr "Besökaren kom från extern länk"
 #: source/php/Submission.php:484
 #, fuzzy
 msgid "Form"
-msgstr "Det finns %d svar på det här formuläret."
+msgstr "Formulär"
 
 #: source/php/Entity/PostType.php:593
 #: source/php/Module/views/form-edit-front.blade.php:13
