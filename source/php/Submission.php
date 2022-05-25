@@ -438,8 +438,8 @@ class Submission
                 $formdata[$field['label']] = $data[sanitize_title($field['label'])] ?? '';
             }
         }
-        $formdata['modularity-form-history'] = $data['modularity-form-history'] ?? '';
-        $formdata['modularity-form-url'] = $data['modularity-form-url'] ?? '';
+        // $formdata['modularity-form-history'] = $data['modularity-form-history'] ?? '';
+        // $formdata['modularity-form-url'] = $data['modularity-form-url'] ?? '';
         return $formdata;
     }
 
