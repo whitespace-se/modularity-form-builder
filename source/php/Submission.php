@@ -440,6 +440,8 @@ class Submission
         }
         // $formdata['modularity-form-history'] = $data['modularity-form-history'] ?? '';
         // $formdata['modularity-form-url'] = $data['modularity-form-url'] ?? '';
+        unset($formdata['modularity-form-history']);
+        unset($formdata['modularity-form-url']);
         return $formdata;
     }
 
