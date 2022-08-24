@@ -1005,8 +1005,8 @@ msgid "You must confirm you're not a robot."
 msgstr "Du måste bekräfta att du inte är en robot."
 
 #: source/php/Module/views/form.blade.php:37
-msgid "One or more plugins on your computer are blocking the reCaptcha service. Please temporarily disable software such as AdGuard Blocker before trying again."
-msgstr "Ett eller flera plugins på din dator blockerar reCaptcha-funktionen. Vänligen inaktivera mjukvara som AdGuard Blocker tillfälligt, innan du försöker igen."
+msgid "It is possible that you will either need to temporarily accept cookies on this website, or that one or more plugins on your computer are blocking the reCaptcha service - in this case please temporarily disable software such as AdGuard Blocker before trying again."
+msgstr "Det är möjligt att du antingen tillfälligt måste acceptera cookies på den här webbplatsen, eller att en eller flera plugins på din dator blockerar reCaptcha-tjänsten. Om det är så behöver du tillfälligt inaktivera programvara som AdGuard Blocker innan du försöker igen."
 
 #: source/php/Module/views/form.blade.php:88
 msgid "Show form"
