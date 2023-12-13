@@ -589,7 +589,7 @@ class PostType
     public function tableColumns($columns)
     {
         return array(
-            'cb' => '',
+            'cb' => '<input type="checkbox" />',
             'title' => __('Title'),
             'id' => __('ID'),
             'form' => __('Form', 'modularity-form-builder'),
