@@ -53,9 +53,11 @@
         @if (!is_user_logged_in() && !isset($_GET['form']) || $_GET['form'] != 'success' )
             <div class="grid">
                 <div class="grid-md-12">
+                <?php if(shortcode_exists('altcha')) { echo do_shortcode('[altcha]'); } else { ?>
                     <div class="g-recaptcha u-mt-2"></div>
                     <div class="form-notice text-danger captcha-warning text-sm"
                          aria-live="polite"><?php _e('You must confirm you\'re not a robot.', 'modularity-form-builder'); ?></div>
+                <?php } ?>
                 </div>
             </div>
         @endif
