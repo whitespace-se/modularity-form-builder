@@ -22,7 +22,7 @@ class Submission
      */
     public function submit()
     {
-        if (class_exists('\Municipio\Helper\ReCaptcha')) {
+        if (!shortcode_exists('altcha') && class_exists('\Municipio\Helper\ReCaptcha')) {
             if (defined('G_RECAPTCHA_KEY') && defined('G_RECAPTCHA_SECRET')) {
                 if (!is_user_logged_in()) {
                     $response = (isset($_POST['g-recaptcha-response']) && strlen($_POST['g-recaptcha-response']) > 0) ? $_POST['g-recaptcha-response'] : null;
